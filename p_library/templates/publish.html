@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1 class="text-center">Список издательств</h1>
+
+    {% for pub in publish %}
+    <ul class="list-group">
+        <li class="list-group-item">{{ pub.title }}</li>
+    </ul>
+    {% endfor %}
+</div>
+{% endblock %}

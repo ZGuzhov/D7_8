@@ -1,0 +1,351 @@
+[
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$216000$I8LLOdIJ4cf4$QO7Cd4a+1+UgO52zxdf4QlsWGzeHjTTlFSBLcvw1sUA=",
+        "last_login": "2020-08-15T15:03:20.561Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "z@z.ru",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2020-08-04T09:30:57.954Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "1r2sdm7b1ar250x67g9rmxgotjhh06q6",
+    "fields": {
+        "session_data": ".eJxVjDsOwjAQBe_iGllxTBabkp4zWPszDqBYipMKcXeIlALaNzPvZRKuS0lr0zmNYs7GmcPvRsgPnTYgd5xu1XKdlnkkuyl2p81eq-jzsrt_BwVb-dYDsyJHH4Ex9tnJibwSZg8ZVFUG9RiYQxAEpGMnTjvvUCUIAElv3h8vADne:1k53cu:Ou9xZdZ9HP0s3Lr9Sv0uq7TEXMGQGDLF_tIoFwzrH1M",
+        "expire_date": "2020-08-24T08:57:52.821Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "almeg9t2qjk5im8asub1qezfvui2il8a",
+    "fields": {
+        "session_data": ".eJxVjDsOwjAQBe_iGllxTBabkp4zWPszDqBYipMKcXeIlALaNzPvZRKuS0lr0zmNYs7GmcPvRsgPnTYgd5xu1XKdlnkkuyl2p81eq-jzsrt_BwVb-dYDsyJHH4Ex9tnJibwSZg8ZVFUG9RiYQxAEpGMnTjvvUCUIAElv3h8vADne:1k4PwX:ZbtrJcDG0F5uHepg2xp9DaZIv_pmlIJdT9x21nlSOQE",
+        "expire_date": "2020-08-22T14:35:29.536Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "rnkmx10647ucvn0yrjr506ksc37ra2g4",
+    "fields": {
+        "session_data": ".eJxVjDsOwjAQBe_iGllxTBabkp4zWPszDqBYipMKcXeIlALaNzPvZRKuS0lr0zmNYs7GmcPvRsgPnTYgd5xu1XKdlnkkuyl2p81eq-jzsrt_BwVb-dYDsyJHH4Ex9tnJibwSZg8ZVFUG9RiYQxAEpGMnTjvvUCUIAElv3h8vADne:1k6xiK:1ZTJdiRyU3sQVpxMno2czTjVr8lkCVt7kMcIlUtoId8",
+        "expire_date": "2020-08-29T15:03:20.628Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "x3osqw39irj6rlhceuxwesmm1y68bn7a",
+    "fields": {
+        "session_data": ".eJxVjDsOwjAQBe_iGllxTBabkp4zWPszDqBYipMKcXeIlALaNzPvZRKuS0lr0zmNYs7GmcPvRsgPnTYgd5xu1XKdlnkkuyl2p81eq-jzsrt_BwVb-dYDsyJHH4Ex9tnJibwSZg8ZVFUG9RiYQxAEpGMnTjvvUCUIAElv3h8vADne:1k4IdL:c-TUArL5eQtLD2OAjJ9vLLwAllrKRuiefYK11qzXgN4",
+        "expire_date": "2020-08-22T06:47:11.417Z"
+    }
+},
+{
+    "model": "p_library.author",
+    "pk": 1,
+    "fields": {
+        "full_name": "Ivanov Ivan Ivanovich",
+        "birth_year": 1900,
+        "country": "RU"
+    }
+},
+{
+    "model": "p_library.author",
+    "pk": 2,
+    "fields": {
+        "full_name": "Petrov Petr Petrovich",
+        "birth_year": 1800,
+        "country": "RU"
+    }
+},
+{
+    "model": "p_library.author",
+    "pk": 3,
+    "fields": {
+        "full_name": "Obamov Obama Obamivich",
+        "birth_year": 1950,
+        "country": "US"
+    }
+},
+{
+    "model": "p_library.author",
+    "pk": 4,
+    "fields": {
+        "full_name": "Pupkin Vasilii Petrovich",
+        "birth_year": 1980,
+        "country": "RU"
+    }
+},
+{
+    "model": "p_library.author",
+    "pk": 5,
+    "fields": {
+        "full_name": "Sidorov Sidr Sidorovich",
+        "birth_year": 1100,
+        "country": "RU"
+    }
+},
+{
+    "model": "p_library.author",
+    "pk": 10,
+    "fields": {
+        "full_name": "Nicolas Kaje",
+        "birth_year": 1960,
+        "country": "US"
+    }
+},
+{
+    "model": "p_library.publish",
+    "pk": 1,
+    "fields": {
+        "title": "Super Publish"
+    }
+},
+{
+    "model": "p_library.publish",
+    "pk": 2,
+    "fields": {
+        "title": "Luxury Publish"
+    }
+},
+{
+    "model": "p_library.publish",
+    "pk": 3,
+    "fields": {
+        "title": "OneBook"
+    }
+},
+{
+    "model": "p_library.publish",
+    "pk": 4,
+    "fields": {
+        "title": "LenIzdat"
+    }
+},
+{
+    "model": "p_library.friend",
+    "pk": 1,
+    "fields": {
+        "full_name": "Peter"
+    }
+},
+{
+    "model": "p_library.friend",
+    "pk": 2,
+    "fields": {
+        "full_name": "Olga"
+    }
+},
+{
+    "model": "p_library.friend",
+    "pk": 3,
+    "fields": {
+        "full_name": "Nikodim"
+    }
+},
+{
+    "model": "p_library.friend",
+    "pk": 4,
+    "fields": {
+        "full_name": "Cheburashka"
+    }
+},
+{
+    "model": "p_library.friend",
+    "pk": 5,
+    "fields": {
+        "full_name": "Thor"
+    }
+},
+{
+    "model": "p_library.friend",
+    "pk": 7,
+    "fields": {
+        "full_name": "Totoshka"
+    }
+},
+{
+    "model": "p_library.friend",
+    "pk": 8,
+    "fields": {
+        "full_name": "Putin"
+    }
+},
+{
+    "model": "p_library.friend",
+    "pk": 9,
+    "fields": {
+        "full_name": "Evgenii"
+    }
+},
+{
+    "model": "p_library.book",
+    "pk": 1,
+    "fields": {
+        "ISBN": "12345",
+        "title": "Blue",
+        "description": "About Blue.",
+        "year_release": 1900,
+        "author": 1,
+        "publish": 1,
+        "friend": 4,
+        "copy_count": 4,
+        "price": "555.00"
+    }
+},
+{
+    "model": "p_library.book",
+    "pk": 2,
+    "fields": {
+        "ISBN": "23141",
+        "title": "White",
+        "description": "About White.",
+        "year_release": 1980,
+        "author": 2,
+        "publish": 4,
+        "friend": null,
+        "copy_count": 6,
+        "price": "1409.00"
+    }
+},
+{
+    "model": "p_library.book",
+    "pk": 3,
+    "fields": {
+        "ISBN": "45363463",
+        "title": "Sea",
+        "description": "About Sea.",
+        "year_release": 1990,
+        "author": 3,
+        "publish": 1,
+        "friend": 5,
+        "copy_count": 2,
+        "price": "145.00"
+    }
+},
+{
+    "model": "p_library.book",
+    "pk": 4,
+    "fields": {
+        "ISBN": "4352352345",
+        "title": "Sky",
+        "description": "About Sky.",
+        "year_release": 2000,
+        "author": 2,
+        "publish": 2,
+        "friend": 4,
+        "copy_count": 9,
+        "price": "1000.00"
+    }
+},
+{
+    "model": "p_library.book",
+    "pk": 5,
+    "fields": {
+        "ISBN": "7467345634",
+        "title": "Five",
+        "description": "About Five.",
+        "year_release": 1999,
+        "author": 2,
+        "publish": 3,
+        "friend": 2,
+        "copy_count": 6,
+        "price": "678.00"
+    }
+},
+{
+    "model": "p_library.book",
+    "pk": 6,
+    "fields": {
+        "ISBN": "453634512",
+        "title": "Last",
+        "description": "Last Book.",
+        "year_release": 2020,
+        "author": 10,
+        "publish": 3,
+        "friend": 8,
+        "copy_count": 4,
+        "price": "999.00"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 50,
+    "fields": {
+        "action_time": "2020-08-15T15:09:02.371Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "p_library",
+            "book"
+        ],
+        "object_id": "2",
+        "object_repr": "White",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Friend\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 51,
+    "fields": {
+        "action_time": "2020-08-15T15:23:30.652Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "p_library",
+            "book"
+        ],
+        "object_id": "2",
+        "object_repr": "White",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Friend\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 52,
+    "fields": {
+        "action_time": "2020-08-15T15:24:09.445Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "p_library",
+            "book"
+        ],
+        "object_id": "2",
+        "object_repr": "White",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 54,
+    "fields": {
+        "action_time": "2020-08-15T15:33:46.333Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "p_library",
+            "book"
+        ],
+        "object_id": "6",
+        "object_repr": "Last",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}
+]

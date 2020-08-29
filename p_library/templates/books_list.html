@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+
+{% block users %}
+<div class="users-block row d-flex justify-content-center">
+    <div class="col text-center">
+        {% if username %}
+            <h1>Привет, {{ username }}! Твой <a href="userprofile">профиль</a>.</h1>
+            <a href="logout">Выйти</a>
+        {% else %}
+            <p>Тебе нужно <a href="register/">зарегистрироваться</a> или <a href="login">войти на сайт</a>!</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
+
+
+{% block content %}
+<div class="container text-center">
+    Добро пожаловать в {{ title }}. <br>
+    Тут собрано {{ books|length }} книг из моей личной коллекции.
+
+    <table border="1">
+        <tr>
+            <td class="text-center">Номер</td>
+            <td class="text-center">Обложка</td>
+            <td class="text-center">Название</td>
+            <td class="text-center">ISBN</td>
+            <td class="text-center">Описание</td>
+            <td class="text-center">Год выпуска</td>
+            <td class="text-center">Автор</td>
+            <td class="text-center">Страна</td>
+            <td class="text-center">Издательство</td>
+            <td class="text-center">Друг</td>
+            <td class="text-center">Кол-во копий</td>
+            <td class="text-center">Увеличить/уменьшить</td>
+        </tr>
+        {% for book in books %}
+        <tr>
+            <td class="text-center">{{ forloop.counter }}</td>
+            <td><a href="{{ book.pic.url }}"><img src='{{ book.pic.url }}' height=60px></a></td>
+            <td>{{ book.title }}</td>
+            <td>{{ book.ISBN }}</td>
+            <td>{{ book.description }}</td>
+            <td class="text-center">{{ book.year_release }}</td>
+            <td>{{ book.author.full_name }}</td>
+            <td class="text-center">{{ book.author.country }}</td>
+            <td>{{ book.publish }}</td>
+            <td>{{ book.friend }}</td>
+            <td class="text-center">{{ book.copy_count }}</td>
+            <td>
+                <form action="/index/book_increment/" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <input type="hidden" name="id" value="{{book.id}}" />
+                    <input class="btn-book" type="submit" value="Увеличить кол-во" />
+                </form>
+                <form action="/index/book_decrement/" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <input type="hidden" name="id" value="{{book.id}}" />
+                    <input class="btn-book" type="submit" value="Уменьшить кол-во" />
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    Просто задачка из модуля:
+    Список чисел от 1 до 100, которые делятся на 3 без остатка:
+    {% for i in "x"|rjust:"100" %}
+        {% ifequal forloop.counter|divisibleby:"3" True %}    
+            {{ forloop.counter }}
+                {% if forloop.counter < 99 %}
+                    ,
+                {% endif %}
+        {% endifequal %}
+    {% endfor %}
+
+</div>
+{% endblock %}

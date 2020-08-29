@@ -1,0 +1,57 @@
+header {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.users-block {
+  margin-bottom: 20px;
+}
+.b-head {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.block{
+  margin-left: 5px;
+  margin-right: 5px;
+  text-align:center;
+  vertical-align: middle;
+  width: 165px;
+  height: 48px;
+  background: rgba(1, 12, 77, 0.46);
+  font-family:RuslanDisplay;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #e0e0e0;
+}
+.block:hover {
+  cursor: pointer;
+  width: 165px;
+  height: 48px;
+  color: white;
+  background: rgba(1, 12, 77, 0.46);
+}
+footer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: rgba(143, 157, 238, 0.46);
+}
+.links {
+  display: flex;
+  font-size: small;
+}
+.links p {
+  min-width: 80px;
+}
+.btn-book {
+  font-size: small;
+  width: 130px;
+}

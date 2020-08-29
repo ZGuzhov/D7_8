@@ -1,0 +1,62 @@
+{% extends "account/base.html" %}
+
+{% load i18n %}
+{% load account socialaccount %}
+
+{% block head_title %}{% trans "Sign In" %}{% endblock %}
+
+{% block content %}
+
+<div class="container my-5">
+
+  <h1 class="font-weight-normal text-center dark-grey-text pb-2 display-4">Войти</h1>
+
+  {% get_providers as socialaccount_providers %}
+
+  {% if socialaccount_providers %}
+  <p class="lead text-center text-muted pt-2 mb-5">{% blocktrans with site.name as site_name %}Пожалуйста, войдите с одним из ваших внешних аккаунтов. Или <a href="{{ signup_url }}">зарегистрируйтесь</a>
+    и авторизуйтесь на сайте {{ site_name }}:{% endblocktrans %}</p>
+
+  <div class="socialaccount_ballot row justify-content-center">
+
+    <div class="col-2">
+      <ul class="socialaccount_providers">
+        {% include "socialaccount/snippets/provider_list.html" with process="login" %}
+      </ul>
+    </div>
+  
+  </div>
+
+  <div class="login-or lead text-center text-muted pt-2 mb-5">или</div>
+  {% include "socialaccount/snippets/login_extra.html" %}
+
+  {% else %}
+  <p>{% blocktrans %}If you have not created an account yet, then please
+  <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
+  {% endif %}
+
+  <form class="login" method="POST" action="{% url 'account_login' %}">
+    {% csrf_token %}
+    <!-- {{ form.as_p }} -->
+    <div class="row d-flex justify-content-center">
+      <div class="col-6">
+        <div class="md-form md-outline form-lg">
+          <input type="text" class="form-control form-control-lg" name="login" placeholder="Имя пользователя" autofocus="autofocus" maxlength="150" required="" id="id_login">
+        </div>
+        <div class="md-form md-outline form-lg">
+          <input type="password" class="form-control form-control-lg" name="password" placeholder="Пароль" required="" id="id_password">
+        </div>
+        <p class="lead text-center text-muted pt-2 mb-5"><label for="id_remember">Запомнить меня:</label> <input type="checkbox" name="remember" id="id_remember"></p>
+      </div>
+    </div>
+
+    {% if redirect_field_value %}
+    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+    {% endif %}
+    <a class="button secondaryAction d-flex justify-content-center" href="{% url 'account_reset_password' %}">Забыли пароль?</a>
+    <button class="primaryAction btn btn-block btn-primary btn-lg" type="submit">Войти</button>
+  </form>
+
+</div>
+
+{% endblock %}

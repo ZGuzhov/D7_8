@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% include 'head.html'%}
+</head>
+
+<body>
+    <header>
+        <div class="container text-center">
+            {% block users %}
+            {% endblock %}
+        
+            {% include 'header.html'%}
+        </div>
+    </header>
+    
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        {% include 'footer.html'%}
+    </footer>
+</body>
+
+</html>

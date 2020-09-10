@@ -8,6 +8,7 @@ from django.forms import formset_factory
 from p_library.models import Book, Publish, Author, Friend
 from p_library.forms import AuthorForm, BookForm, FriendForm
 from users.models import UserProfile
+from allauth.socialaccount.models import SocialAccount
 
 
 class AuthorEdit(CreateView):  
@@ -47,7 +48,11 @@ def books_list(request):
         "books": books,
     }
     if request.user.is_authenticated:  
-        biblio_data['username'] = request.user.username 
+        biblio_data['username'] = request.user.username
+        social = SocialAccount.objects.filter(provider='github', user=request.user).first()
+        if social:
+            biblio_data['github_url'] = SocialAccount.objects.get(provider='github', user=request.user).extra_data['html_url']
+
     return HttpResponse(template.render(biblio_data, request))
     # return render(request, 'books_list.html', biblio_data)
 

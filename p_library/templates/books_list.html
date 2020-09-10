@@ -5,7 +5,11 @@
 <div class="users-block row d-flex justify-content-center">
     <div class="col text-center">
         {% if username %}
-            <h1>Привет, {{ username }}! Твой <a href="userprofile">профиль</a>.</h1>
+            <h1>Привет, {{ username }}! Твой <a href="userprofile">профиль</a>. 
+            {% if github_url %}
+                Профиль на <a href="{{ github_url }}">GitHub.</a>
+            {% endif %}
+            </h1>
             <a href="logout">Выйти</a>
         {% else %}
             <p>Тебе нужно <a href="register/">зарегистрироваться</a> или <a href="login">войти на сайт</a>!</p>
